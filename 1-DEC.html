@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+</head>
+
+<body>
+    <h2>Program for Simple Calculator</h2>
+    <script>
+        var num1 = prompt("Enter first number");
+        var num2 = prompt("Enter second number");
+
+        a = parseInt(num1);
+        b = parseInt(num2);
+
+        var Calculator = {
+            'add': function(a, b) {
+                let total = a + b;
+                return total;
+            },
+            'sub': function(a, b) {
+                let total = a - b;
+                return total;
+            },
+            'div': function(a, b) {
+                let total = a / b;
+                return total;
+            },
+            'mul': function(a, b) {
+                let total = a * b;
+                return total;
+            }
+        }
+        var addition = Calculator.add(a, b);
+        console.log("Sum of " + a + " and " + b + " is: " + addition);
+
+        var Subtraction = Calculator.sub(a, b);
+        console.log("Subtraction of " + a + " and " + b + " is: " + Subtraction);
+
+        var division = Calculator.div(a, b);
+        console.log("Division of " + a + " and " + b + " is: " + division);
+
+        var multiplication = Calculator.mul(a, b);
+        console.log("Multiplication of " + a + " and " + b + " is: " + multiplication);
+    </script>
+</body>
+
+</html>
