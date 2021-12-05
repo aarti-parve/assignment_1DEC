@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #a96dbf;
+        }
+        
+        h1 {
+            text-align: center;
+        }
+        
+        hr {
+            width: 30em;
+        }
+        
+        .container {
+            border: 2px solid black;
+            display: flex;
+            justify-content: center;
+            width: 250px;
+            margin-left: 550px;
+        }
+        
+        #count {
+            padding: 10px;
+            border: 3px solid #55516b;
+            margin: 20px;
+        }
+        
+        button {
+            padding: 10px;
+            border: 2px solid #55516b;
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Counter</h1>
+    <hr>
+    <div class="container">
+        <div id="count">0</div>
+
+        <button id="like"> Like
+        </button>
+        <button id="dislike"> Dislike
+        </button>
+    </div>
+    <script>
+        let increase_counter = document.getElementById('like');
+
+        let decrease_counter = document.getElementById('dislike');
+
+        let int = document.getElementById('count');
+
+        let integer = 0;
+        increase_counter.addEventListener('click', function() {
+            integer = integer + 1;
+            int.innerHTML = integer;
+
+        })
+
+        decrease_counter.addEventListener('click', function() {
+            integer = integer - 1;
+            int.innerHTML = integer;
+
+        })
+    </script>
+</body>
+
+</html>
