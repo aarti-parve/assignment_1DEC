@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+
+<body>
+    <h2>Assignment of december 2</h2>
+    <script>
+        var Calculator = {
+            'add': function(a, b) {
+                let total = this.a + this.b;
+                return total;
+            },
+            'sub': function(a, b) {
+                let total = a - b;
+                return total;
+            },
+            'div': function(a, b) {
+                let total = a / b;
+                return total;
+            },
+            'mul': function(a, b) {
+                let total = a * b;
+                return total;
+            }
+        }
+        var set1 = {
+            a: 10,
+            b: 20,
+        }
+
+        var set2 = {
+            a: 30,
+            b: 40,
+        }
+
+        var addition = Calculator.add.call(set1);
+        console.log(addition);
+        var addition = Calculator.add.call(set2);
+        console.log(addition);
+
+        //call with parameter
+        let obj = {
+            key1: 'something',
+            key2: 'something',
+        }
+
+        var Subtraction = Calculator.sub.call(obj, 30, 10)
+        console.log(Subtraction);
+
+        //array-of-parameter
+        let array = [40, 5];
+        var multiplication = Calculator.mul.apply(obj, array)
+        console.log(multiplication);
+
+        let Division = Calculator.div.bind(obj);
+        console.log(typeof Division);
+    </script>
+</body>
+
+</html>
